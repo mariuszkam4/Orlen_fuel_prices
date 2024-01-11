@@ -1,0 +1,9 @@
+{
+	"name": "databag-crude-data",
+	"location": "polandcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b1da4730-4ffa-4e14-9564-edb8b78e22d1",
+		"tenantId": "dbb41d7a-0043-4ee2-9843-6e4ff66cc9c8"
+	}
+}
