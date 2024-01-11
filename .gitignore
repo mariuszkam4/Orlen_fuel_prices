@@ -1,0 +1,34 @@
+# Katalogi systemu operacyjnego
+.DS_Store    # Pliki systemu macOS
+Thumbs.db    # Pliki miniatur systemu Windows
+
+# Katalogi środowisk wirtualnych Pythona
+venv/
+env/
+.virtualenv/
+
+# Pliki kompilacji
+*.pyc
+__pycache__/
+
+# Pliki pakietów
+*.egg-info/
+dist/
+
+# Pliki konfiguracyjne IDE
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# Pliki logów
+*.log
+
+# Zależności Node.js
+node_modules/
+
+# Pliki konfiguracyjne środowiska
+.env
+
+# Katalogi build
+build/
