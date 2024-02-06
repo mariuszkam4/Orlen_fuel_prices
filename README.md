@@ -32,7 +32,7 @@ Run the Jupyter notebook and proceed through the various stages of the project.
 ## License
 The project is made available under the MIT License.
 
-PL
+## PL
 # Analiza cen paliw Orlen i modelowanie cen Eurodiesel
 ## Opis projektu
 Projekt koncentruje się na analizie i modelowaniu zależności między cenami hurtowymi paliw Orlen a cenami ropy Brent oraz kursem wymiany USD/PLN. Celem jest zrozumienie wpływu globalnych czynników ekonomicznych na ceny paliw w Polsce oraz rozwinięcie modelu predykcyjnego dla cen Eurodiesel.
