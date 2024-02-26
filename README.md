@@ -77,5 +77,5 @@ Uruchom notatnik Jupyter komórka po komórce, aby powtórzyć analizę.
 
 ## Licencja
 Ten projekt jest wydany na licencji MIT, umożliwiającej dystrybucję i modyfikację open source z odpowiednim przypisaniem.
-*** Przetłumaczono za pomocą www.DeepL.com/Translator (wersja darmowa) ***
+
 
