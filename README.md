@@ -18,16 +18,29 @@ In this project, I analyze the interplay between Orlen's wholesale fuel prices i
 - **Data Visualization**: Using matplotlib and seaborn, I create a series of line and scatter plots to visualize price trends over time and explore the correlations between the various economic indicators.
 
 ### 3. Data Modeling
-- **Linear Regression**: A linear regression model is first built as a baseline to predict Eurodiesel prices using Brent oil prices converted to PLN.
-- **Random Forest Regression**: A more sophisticated Random Forest model is then developed to capture non-linear relationships and interactions between variables.
+#### Linear Regression
+- Implemented a simple linear regression model to establish a baseline for predictive performance. This model predicts Eurodiesel prices based solely on the Brent oil prices converted to PLN.
+
+#### Polynomial Regression
+- To capture more complex relationships, a polynomial regression model was applied. This model includes higher-order terms of the input features to allow for a non-linear relationship between the predictors and the target variable.
+- Learning and validation curves were plotted to assess the model's performance and to ensure the right balance between bias and variance, thus addressing any potential overfitting or underfitting.
+
+#### Random Forest Regression
+- A Random Forest model was then developed for its ability to handle non-linearities and interactions between features without explicit specification. It improves upon the simple regression models by using an ensemble of decision trees.
+- The model's hyperparameters were tuned, and its performance was evaluated using cross-validation to ensure robust predictions. Feature importance was also derived to understand the influence of each predictor on the fuel prices.
+
+#### ARIMAX Model
+- Lastly, an ARIMAX (AutoRegressive Integrated Moving Average with eXogenous variables) model was employed to account for time-series characteristics such as trends, seasonality, and autocorrelation in the data.
+- The ARIMAX model included external variables like Brent oil prices and the USD/PLN exchange rate to predict Eurodiesel prices, leveraging the temporal dynamics in conjunction with the economic factors.
 
 ### 4. Model Validation
-- **Cross-Validation**: To prevent overfitting, I perform k-fold cross-validation and calculate the mean squared error (MSE) to evaluate the Random Forest model's performance.
-- **Evaluation Metrics**: The final model's accuracy is measured by computing the MSE and R² coefficient on the test set.
+- Cross-Validation: Extensive k-fold cross-validation was conducted for each model to assess its predictive accuracy and to mitigate the risk of overfitting.
+- Evaluation Metrics: Models were rigorously evaluated using Mean Squared Error (MSE) and the R² coefficient to quantify prediction errors and to explain the variance in Eurodiesel prices, respectively.
 
 ### 5. Conclusions
-- **Results Analysis**: Insights into the patterns of fuel prices are derived, highlighting periods of significant divergence from the expected economic indicators.
-- **Model Assessment**: The Random Forest model's predictions are assessed, showing its effectiveness in capturing complex relationships between variables and its potential use in forecasting.
+- **Results Analysis**: The analysis provided a multifaceted view of fuel price dynamics, underscoring the complex interplay between global economic factors and local pricing.
+- **Model Assessment**: The comparative effectiveness of different models was discussed, highlighting the strengths of ensemble and time-series approaches in capturing the nuances of the dataset.
+
 
 ## Installation and Usage
 Ensure you have Python installed, and then run the following commands to install the required libraries:
@@ -58,16 +71,28 @@ W tym projekcie analizuję interakcję między hurtowymi cenami paliw Orlen w Po
 - **Wizualizacja danych**: Korzystając z matplotlib i seaborn, tworzę serię wykresów liniowych i rozproszonych w celu wizualizacji trendów cenowych w czasie i zbadania korelacji między różnymi wskaźnikami ekonomicznymi.
 
 ### 3. Modelowanie danych
-- Regresja liniowa**: Model regresji liniowej jest najpierw budowany jako punkt odniesienia do przewidywania cen oleju napędowego Eurodiesel przy użyciu cen ropy Brent przeliczonych na PLN.
-- **Random Forest Regression**: Bardziej zaawansowany model Random Forest jest następnie opracowywany w celu uchwycenia nieliniowych relacji i interakcji między zmiennymi.
+#### Regresja liniowa
+- Wdrożono prosty model regresji liniowej, aby ustalić punkt odniesienia dla wydajności predykcyjnej. Model ten przewiduje ceny oleju napędowego Eurodiesel wyłącznie na podstawie cen ropy Brent przeliczonych na PLN.
+
+#### Regresja wielomianowa
+- Aby uchwycić bardziej złożone zależności, zastosowano model regresji wielomianowej. Model ten obejmuje warunki wyższego rzędu cech wejściowych, aby umożliwić nieliniową zależność między predyktorami a zmienną docelową.
+- Krzywe uczenia i walidacji zostały wykreślone w celu oceny wydajności modelu i zapewnienia właściwej równowagi między odchyleniem a wariancją, tym samym zajmując się potencjalnym nadmiernym lub niedostatecznym dopasowaniem.
+
+#### Random Forest Regression
+- Model Random Forest został następnie opracowany ze względu na jego zdolność do obsługi nieliniowości i interakcji między cechami bez wyraźnej specyfikacji. Ulepsza on proste modele regresji, wykorzystując zespół drzew decyzyjnych.
+- Dostrojono hiperparametry modelu, a jego wydajność oceniono za pomocą walidacji krzyżowej, aby zapewnić solidne przewidywania. Określono również znaczenie cech, aby zrozumieć wpływ każdego predyktora na ceny paliw.
+
+#### Model ARIMAX
+- Na koniec zastosowano model ARIMAX (AutoRegressive Integrated Moving Average with eXogenous variables) w celu uwzględnienia cech szeregów czasowych, takich jak trendy, sezonowość i autokorelacja w danych.
+- Model ARIMAX obejmował zmienne zewnętrzne, takie jak ceny ropy Brent i kurs wymiany USD/PLN, aby przewidzieć ceny oleju napędowego Eurodiesel, wykorzystując dynamikę czasową w połączeniu z czynnikami ekonomicznymi.
 
 ### 4. Walidacja modelu
-- **Walidacja krzyżowa**: Aby zapobiec nadmiernemu dopasowaniu, przeprowadzam k-krotną walidację krzyżową i obliczam średni błąd kwadratowy (MSE), aby ocenić wydajność modelu Random Forest.
-- **Metryki oceny**: Dokładność ostatecznego modelu jest mierzona poprzez obliczenie MSE i współczynnika R² na zbiorze testowym.
+- Walidacja krzyżowa: Dla każdego modelu przeprowadzono szeroko zakrojoną k-krotną walidację krzyżową, aby ocenić jego dokładność predykcyjną i zmniejszyć ryzyko nadmiernego dopasowania.
+- Wskaźniki oceny: Modele zostały poddane rygorystycznej ocenie przy użyciu średniego błędu kwadratowego (MSE) i współczynnika R² w celu ilościowego określenia błędów predykcji i wyjaśnienia wariancji cen oleju napędowego Eurodiesel.
 
 ### 5. Wnioski
-- Analiza wyników**: Uzyskano wgląd we wzorce cen paliw, podkreślając okresy znacznych rozbieżności od oczekiwanych wskaźników ekonomicznych.
-- **Ocena modelu**: Oceniono przewidywania modelu Random Forest, pokazując jego skuteczność w wychwytywaniu złożonych relacji między zmiennymi i jego potencjalne zastosowanie w prognozowaniu.
+- Analiza wyników**: Analiza dostarczyła wieloaspektowego spojrzenia na dynamikę cen paliw, podkreślając złożoną interakcję między globalnymi czynnikami ekonomicznymi a lokalnymi cenami.
+- **Ocena modelu**: Omówiono skuteczność porównawczą różnych modeli, podkreślając mocne strony podejścia zespołowego i szeregów czasowych w uchwyceniu niuansów zbioru danych.
 
 ## Instalacja i użytkowanie
 Upewnij się, że masz zainstalowany Python, a następnie uruchom następujące polecenia, aby zainstalować wymagane biblioteki:
